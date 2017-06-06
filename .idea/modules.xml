@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CardReader.iml" filepath="$PROJECT_DIR$/CardReader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a64cardreader/a64cardreader.iml" filepath="$PROJECT_DIR$/a64cardreader/a64cardreader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/huadacardreader/huadacardreader.iml" filepath="$PROJECT_DIR$/huadacardreader/huadacardreader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mT9Reader/mT9Reader.iml" filepath="$PROJECT_DIR$/mT9Reader/mT9Reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mTReader/mTReader.iml" filepath="$PROJECT_DIR$/mTReader/mTReader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mingtaicardreader/mingtaicardreader.iml" filepath="$PROJECT_DIR$/mingtaicardreader/mingtaicardreader.iml" />
+    </modules>
+  </component>
+</project>

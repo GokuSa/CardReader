@@ -1,0 +1,118 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\MT9Reader.iml
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\workspace.xml
+* ic_launcher-web.png
+* ic_launcher-web1.png
+* obj\
+* obj\_desktop.ini
+* obj\convert-dependencies.sh
+* obj\local\
+* obj\local\_desktop.ini
+* obj\local\armeabi-v7a\
+* obj\local\armeabi-v7a\objs\
+* obj\local\armeabi-v7a\objs\mt3x32\
+* obj\local\armeabi-v7a\objs\mt3x32\SiCard.o
+* obj\local\armeabi-v7a\objs\mt3x32\SiCard.o.d
+* obj\local\armeabi-v7a\objs\mt3x32\add-module.o
+* obj\local\armeabi-v7a\objs\mt3x32\add-module.o.d
+* obj\local\armeabi-v7a\objs\mt3x32\mt3x_32.o
+* obj\local\armeabi-v7a\objs\mt3x32\mt3x_32.o.d
+* obj\local\armeabi-v7a\objs\mt3x32\mthidlinux.o
+* obj\local\armeabi-v7a\objs\mt3x32\mthidlinux.o.d
+* obj\local\armeabi\
+* obj\local\armeabi\_desktop.ini
+* obj\local\armeabi\libmt3x32.so
+* obj\local\armeabi\objs\
+* obj\local\armeabi\objs\_desktop.ini
+* obj\local\armeabi\objs\mt3x32\
+* obj\local\armeabi\objs\mt3x32\SiCard.o
+* obj\local\armeabi\objs\mt3x32\SiCard.o.d
+* obj\local\armeabi\objs\mt3x32\_desktop.ini
+* obj\local\armeabi\objs\mt3x32\add-module.o
+* obj\local\armeabi\objs\mt3x32\add-module.o.d
+* obj\local\armeabi\objs\mt3x32\mt3x_32.o
+* obj\local\armeabi\objs\mt3x32\mt3x_32.o.d
+* obj\local\armeabi\objs\mt3x32\mthidlinux.o
+* obj\local\armeabi\objs\mt3x32\mthidlinux.o.d
+* obj\local\x86\
+* obj\local\x86\objs\
+* obj\local\x86\objs\mt3x32\
+* obj\local\x86\objs\mt3x32\SiCard.o
+* obj\local\x86\objs\mt3x32\SiCard.o.d
+* obj\local\x86\objs\mt3x32\add-module.o
+* obj\local\x86\objs\mt3x32\add-module.o.d
+* obj\local\x86\objs\mt3x32\mt3x_32.o
+* obj\local\x86\objs\mt3x32\mt3x_32.o.d
+* obj\local\x86\objs\mt3x32\mthidlinux.o
+* obj\local\x86\objs\mt3x32\mthidlinux.o.d
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => mT9Reader\src\main\AndroidManifest.xml
+* assets\ => mT9Reader\src\main\assets\
+* libs\armeabi\libDecodeWlt.so => mT9Reader\src\main\jniLibs\armeabi\libDecodeWlt.so
+* libs\armeabi\libmt3x32.so => mT9Reader\src\main\jniLibs\armeabi\libmt3x32.so
+* lint.xml => mT9Reader\lint.xml
+* res\ => mT9Reader\src\main\res\
+* src\ => mT9Reader\src\main\java\
+* src\com\synjones\bluetooth\_desktop.ini => mT9Reader\src\main\resources\com\synjones\bluetooth\_desktop.ini
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\workspace_lxl\\CardReader\\mTReader\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "E:\\workspace_lxl\\CardReader\\mTReader\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\workspace_lxl\\MingTaiCard\\mTReader\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "E:\\workspace_lxl\\MingTaiCard\\mTReader\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\workspace_lxl\\MingTaiCard\\mTReader\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher1.png",
+        "source": "E:\\workspace_lxl\\MingTaiCard\\mTReader\\src\\main\\res\\drawable-ldpi\\ic_launcher1.png"
+    },
+    {
+        "merged": "E:\\workspace_lxl\\CardReader\\mTReader\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher1.png",
+        "source": "E:\\workspace_lxl\\CardReader\\mTReader\\src\\main\\res\\drawable-ldpi\\ic_launcher1.png"
+    }
+]

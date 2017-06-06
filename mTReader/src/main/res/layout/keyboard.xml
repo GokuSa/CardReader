@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliceblue"
+    android:contentDescription="0"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:id="@+id/textView_SetPwdLen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="4dp"
+        android:text="设置密码长度" />
+
+    <EditText
+        android:id="@+id/editText_SetPwdLen"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/editText_Sex"
+        android:layout_alignTop="@+id/textView_SetPwdLen"
+        android:layout_marginTop="1dp"
+        android:text="6"
+        android:layout_toRightOf="@+id/textView_SetPwdLen" />
+
+    <TextView
+        android:id="@+id/TextView_SetTimeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText_SetPwdLen"
+        android:layout_toRightOf="@+id/editText_SetPwdLen"
+        android:text="设置超时时间" />
+
+    <EditText
+        android:id="@+id/EditText_Timeout"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/TextView_SetTimeOut"
+        android:layout_toRightOf="@+id/TextView_SetTimeOut"
+        android:text="10"
+        android:ems="10" />
+        <TextView
+        android:id="@+id/Text_Sencond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/EditText_Timeout"
+        android:text="秒" />
+
+    <TextView
+        android:id="@+id/TextView_MasterKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_SetPwdLen"
+        android:layout_toLeftOf="@+id/editText_SetPwdLen"
+        android:text="主密钥" />
+
+    <EditText
+        android:id="@+id/EditText_MasterKey"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/editText_SetPwdLen"
+        android:layout_alignTop="@+id/TextView_MasterKey"
+        android:text="1234567812345678"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextView_WorkKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditText_MasterKey"
+        android:layout_toLeftOf="@+id/EditText_MasterKey"
+        android:text="工作密钥" />
+
+    <EditText
+        android:id="@+id/EditText_WorkKey"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/EditText_MasterKey"
+        android:layout_alignTop="@+id/TextView_WorkKey"
+        android:text="1234567812345678"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextView_CardNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditText_WorkKey"
+        android:layout_toLeftOf="@+id/EditText_WorkKey"
+        android:text="卡号" />
+    
+    <EditText
+        android:id="@+id/EditText_CardNo"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/EditText_MasterKey"
+        android:layout_alignTop="@+id/TextView_CardNo"
+        android:text="012345678922"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextView_MasterNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditText_CardNo"
+        android:layout_toLeftOf="@+id/EditText_CardNo"
+        android:text="主密钥号" />
+
+    <Spinner
+        android:id="@+id/spinner_MasterNo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/EditText_CardNo"
+        android:layout_below="@+id/EditText_CardNo" />
+
+    <TextView
+        android:id="@+id/TextView_WorkKeyNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner_MasterNo"
+        android:layout_toRightOf="@+id/spinner_MasterNo"
+        android:text="工作密钥号" />
+
+    <Spinner
+        android:id="@+id/spinner_WorkKeyNo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/spinner_MasterNo"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/EditText_CardNo"
+        android:layout_toRightOf="@+id/TextView_WorkKeyNo"/>
+
+    <TextView
+        android:id="@+id/TextView_SetVoiceNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView_MasterNo"
+        android:layout_below="@+id/spinner_MasterNo"
+        android:text="提示音" />
+
+    <Spinner
+        android:id="@+id/spinner_SetVoiceNotice"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spinner_MasterNo"
+        android:layout_alignTop="@+id/TextView_SetVoiceNotice" />
+
+    <Button
+        android:id="@+id/btn_SetTimeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView_SetVoiceNotice"
+        android:layout_below="@+id/spinner_SetVoiceNotice"
+        android:onClick="bt_PinPad_SetTimeOut"
+        android:text="设置超时时间" />
+
+    <Button
+        android:id="@+id/btn_SetPwdLen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_SetTimeOut"
+        android:layout_alignBottom="@+id/btn_SetTimeOut"
+        android:layout_toLeftOf="@+id/spinner_WorkKeyNo"
+        android:onClick="bt_PinPad_SetPINLenth"
+        android:text="设置密码长度" />
+
+    <Button
+        android:id="@+id/btn_LoadMasterKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_SetTimeOut"
+        android:layout_alignRight="@+id/btn_SetTimeOut"
+        android:layout_below="@+id/btn_SetTimeOut"
+        android:onClick="bt_PinPad_DownMK"
+        android:text="下载主密钥" />
+
+    <Button
+        android:id="@+id/btn_LoadWorkKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_LoadMasterKey"
+        android:layout_alignBottom="@+id/btn_LoadMasterKey"
+        android:layout_alignLeft="@+id/btn_SetPwdLen"
+        android:onClick="bt_PinPad_DownWK"
+        android:text="下载工作密钥" />
+
+    <Button
+        android:id="@+id/btn_ActiveWorkKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_LoadMasterKey"
+        android:layout_below="@+id/btn_LoadMasterKey"
+        android:onClick="bt_PinPad_ACTWK"
+        android:text="激活工作密钥" />
+
+    <Button
+        android:id="@+id/btn_GetPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_ActiveWorkKey"
+        android:layout_below="@+id/btn_ActiveWorkKey"
+        android:onClick="bt_PinPad_GetPin"
+        android:text="获取输入密码" />
+
+    <Button
+        android:id="@+id/btn_GetEncryptPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_LoadWorkKey"
+        android:layout_below="@+id/btn_ActiveWorkKey"
+        android:onClick="bt_PinPad_GetEncryptPin"
+        android:text="获取输入密码【加密】" />
+
+    <TextView
+        android:id="@+id/textView_PinPadExcute_Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView_MasterKey"
+        android:layout_alignRight="@+id/btn_LoadMasterKey"
+        android:layout_below="@+id/btn_GetPin"
+        android:text="执行信息" />
+
+    <EditText
+        android:id="@+id/editText_PinPadExecuteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spinner_SetVoiceNotice"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_PinPadExcute_Info"
+        android:ems="10"
+        android:inputType="textImeMultiLine" />
+
+</RelativeLayout>

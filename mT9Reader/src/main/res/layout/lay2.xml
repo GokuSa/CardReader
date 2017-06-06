@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliceblue"
+    android:orientation="vertical" >
+	<LinearLayout 
+    android:focusable="true" 
+    android:focusableInTouchMode="true"       
+    android:layout_width="0px" 
+	android:layout_height="0px"/>
+    <EditText
+        android:id="@+id/lay2_edit_send"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="0084000008" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lay2_edit_send"
+        android:layout_alignBottom="@+id/lay2_edit_send"
+        android:layout_alignParentLeft="true"
+        android:text="发送的数据:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lay2_edit_send"
+        android:layout_marginTop="27dp"
+        android:text="接收的数据:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/lay2_edit_recv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/lay2_edit_send"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView2"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnopencard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lay2_edit_recv"
+        android:layout_marginTop="22dp"
+        android:text="激活卡片" 
+        android:onClick="a_opencard" />
+
+    <Button
+        android:id="@+id/btncmdsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnopencard"
+        android:layout_alignBottom="@+id/btnopencard"
+        android:layout_toRightOf="@+id/btnopencard"
+        android:text="发送命令" 
+        android:onClick="a_cmdsend"/>
+
+    <Button
+        android:id="@+id/btnclosecard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btncmdsend"
+        android:layout_alignBottom="@+id/btncmdsend"
+        android:layout_toRightOf="@+id/btncmdsend"
+        android:onClick="a_closecard"
+        android:text="关闭卡片" />
+
+    <TextView
+        android:id="@+id/textView_Sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnopencard"
+        android:layout_marginTop="26dp"
+        android:text="提示信息:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/lay2_Tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/lay2_edit_recv"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btncmdsend"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine" />
+
+    <Spinner
+        android:id="@+id/spinner_ContractLessCpuCos"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnclosecard"
+        android:layout_alignTop="@+id/btnclosecard"
+        android:layout_toRightOf="@+id/btnclosecard" />
+    
+    <Button
+        android:id="@+id/btngetContractlesscardnoandname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btncmdsend"
+        android:layout_toRightOf="@+id/spinner_ContractLessCpuCos"
+        android:text="金融IC卡卡号姓名获取" 
+        android:onClick="a_getjingrongicCOntractlesscardnoandname"/>
+
+</RelativeLayout>

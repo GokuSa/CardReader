@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mtreader"
+    android:versionCode="4"
+    android:versionName="1.4.1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+    <application
+        android:icon="@drawable/ic_action_search"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.mtreader.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />				
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>   
+        </activity>
+        <activity
+            android:name="com.example.mtreader.Card"
+            android:label="@string/title_activity_card" >
+        </activity>
+        <activity
+            android:name="com.example.mtreader.IdentifyActivity"
+            android:label="二代证操作" >
+        </activity>
+        <activity
+            android:name="com.example.mtreader.ContractMemCard"
+            android:label="接触式存储卡操作" >
+        </activity>
+        <activity
+            android:name="com.example.mtreader.PinPad"
+            android:label="密码键盘操作" >
+        </activity>
+    </application>
+<!-- 在SDCard中创建与删除文件的权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<!-- 往SDCard写入数据的权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+</manifest>

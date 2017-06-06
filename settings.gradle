@@ -1,0 +1,3 @@
+include ':app', ':a64cardreader', ':mingtaicardreader', ':huadacardreader'
+include ':mTReader'
+include ':mT9Reader'

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azure"
+    android:gravity="top"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btncloseport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnopenport"
+        android:layout_alignBottom="@+id/btnopenport"
+        android:layout_centerHorizontal="true"
+        android:text="断开连接" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView_Sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnbeep"
+        android:text="提示信息:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnbeep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btncardop"
+        android:layout_alignBottom="@+id/btncardop"
+        android:layout_alignParentLeft="true"
+        android:text="  蜂鸣   " />
+
+    <Button
+        android:id="@+id/btn_Finger"
+        android:layout_width="wrap_content"
+        android:layout_height="48px"
+        android:layout_alignBottom="@+id/btncardop"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btncloseport"
+        android:text="指纹仪操作" />
+
+    <Button
+        android:id="@+id/btncardop"
+        style="@color/chartreuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btncloseport"
+        android:layout_toLeftOf="@+id/Button04"
+        android:text="进入卡片操作"
+        android:textColor="#FF0000" />
+
+    <Button
+        android:id="@+id/btntrackread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button04"
+        android:layout_toRightOf="@+id/btncloseport"
+        android:text="  磁条卡读取 " />
+
+    <EditText
+        android:id="@+id/layout1_Tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView_Sex"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnopenport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btncloseport"
+        android:text="连接设备" />
+
+</RelativeLayout>
