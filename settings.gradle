@@ -1,3 +1,3 @@
-include ':app', ':a64cardreader', ':mingtaicardreader', ':huadacardreader'
+include ':app', ':a64cardreader', ':mingtaicardreader', ':huadacardreader', ':decard'
 include ':mTReader'
 include ':mT9Reader'

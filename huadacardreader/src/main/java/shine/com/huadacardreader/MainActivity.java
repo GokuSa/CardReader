@@ -143,8 +143,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 String primary = new String(data);
                 Log.d(TAG, "result--"+primary);
-                String result = format(primary.trim());
-                mTextView.setText("M1卡第1块：--" +result );
+//                String result = format(primary.trim());
+                mTextView.setText("M1卡第1块：--" +primary );
                 break;
         }
     }

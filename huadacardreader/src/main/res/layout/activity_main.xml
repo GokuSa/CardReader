@@ -16,7 +16,6 @@
         android:id="@+id/btnReadSSC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:text="读社保卡"/>
 
     <Button
@@ -30,7 +29,6 @@
         android:id="@+id/btnReadID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:text="读身份证信息"/>
 
     <TextView
