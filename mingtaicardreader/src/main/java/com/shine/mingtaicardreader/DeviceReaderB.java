@@ -38,11 +38,16 @@ public class DeviceReaderB extends CardReader{
             mTextViewStatus.setText("当前设备R16");
         } else  {
             mTextViewStatus.setText("设备不能识别");
+            return;
         }
         new Thread() {
             @Override
             public void run() {
-                new RootCommand().executeCommands("chmod 777 /dev/bus/usb/001/*");
+                if (Build.VERSION.SDK_INT == 15) {
+                    grant801Authority();
+                }else if (Build.VERSION.SDK_INT == 19){
+                    grantR16Authority();
+                }
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
                     @Override
                     public void run() {
@@ -56,7 +61,7 @@ public class DeviceReaderB extends CardReader{
                                 mTextViewStatus.append(" 设备BEEP失败");
                             }
                         } else {
-                            mTextViewStatus.setText("打开设备失败 请允许应用程序访问设备");
+                            mTextViewStatus.append("打开设备失败 请允许应用程序访问设备");
                         }
                     }
                 });
@@ -64,8 +69,24 @@ public class DeviceReaderB extends CardReader{
         }.start();
     }
 
+    private void grant801Authority() {
+        RootCmd.execRootCmdSlient(
+                "chmod 777 /dev/bus/;"+
+                        "chmod 777 /dev/bus/usb/;"+
+                        "chmod 777 /dev/bus/usb/0*;"+
+                        "chmod 777 /dev/bus/usb/001/*;"+
+                        "chmod 777 /dev/bus/usb/002/*;"+
+                        "chmod 777 /dev/bus/usb/003/*;"+
+                        "chmod 777 /dev/bus/usb/004/*;"+
+                        "chmod 777 /dev/bus/usb/005/*;");
+    }
 
-
+    private void grantR16Authority() {
+          new RootCommand().executeCommands("chmod 777 /dev/bus/","chmod 777 /dev/bus/usb/",
+                        "chmod 777 /dev/bus/usb/0*","chmod 777 /dev/bus/usb/001",
+                        "chmod 777 /dev/bus/usb/002", "chmod 777 /dev/bus/usb/003"
+                , "chmod 777 /dev/bus/usb/004", "chmod 777 /dev/bus/usb/005");
+    }
     @Override
     public int readId(TextView mTextView) {
         mTextView.setText("开始读身份证\n");

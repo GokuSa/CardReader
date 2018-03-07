@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mt9reader.test">
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

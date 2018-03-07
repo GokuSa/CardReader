@@ -4,7 +4,7 @@
 - a64cardreader 在A64上的读卡演示,身份证头像读取失败不再维护
 - mTReader 明泰官方6.0以下demo
 - mT9Reader 明泰官方6.0demo
-- mingtaicardreader 明泰读卡，统一了801，R16，A64读卡
+- mingtaicardreader 明泰读卡，统一了801，R16，A64读卡,含打印演示
 
 ##华大读卡器ID、社保卡、M1读卡demo
 
@@ -14,3 +14,6 @@
 - decard 
 - 目前在801，A64上测试成功
 - 如果连接不成功，检查所使用库是否是最新的
+
+##打印机模块
+- printer_module

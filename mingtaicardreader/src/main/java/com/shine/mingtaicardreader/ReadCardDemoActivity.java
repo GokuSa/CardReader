@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.shine.printer_module.PrintContent2;
+import com.shine.printer_module.PrinterHelper;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,6 +29,7 @@ public class ReadCardDemoActivity extends AppCompatActivity {
     @Bind(R.id.tv_content)
     TextView mTvContent;
     private CardReader mCardReader;
+    private PrinterHelper mPrinterHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +38,20 @@ public class ReadCardDemoActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mCardReader = CardReader.getInstance(this);
         mCardReader.init(mTvStatus);
+
+        mPrinterHelper=new PrinterHelper(this);
+        mPrinterHelper.init();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mCardReader.close();
+        mPrinterHelper.exit();
     }
 
     @OnClick({R.id.btn_id, R.id.btn_social, R.id.btn_M1,
-            R.id.btn_shanghai_social_card,R.id.btn_get_region_code})
+            R.id.btn_shanghai_social_card,R.id.btn_get_region_code,R.id.btn_print})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_id:
@@ -67,6 +75,15 @@ public class ReadCardDemoActivity extends AppCompatActivity {
                 break;
             case R.id.btn_get_region_code:
                 mCardReader.readSocialCardRegionCode(mTvContent);
+                break;
+            case R.id.btn_print:
+                final PrintContent2 printContent2 = new PrintContent2("12", "12", "12", "12", "12", "12");
+                new Thread(){
+                    @Override
+                    public void run() {
+                        mPrinterHelper.print(printContent2);
+                    }
+                }.start();
                 break;
         }
     }

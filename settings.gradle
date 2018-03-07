@@ -1,3 +1,4 @@
-include ':app', ':a64cardreader', ':mingtaicardreader', ':huadacardreader', ':decard'
-include ':mTReader'
-include ':mT9Reader'
+//include ':app', ':a64cardreader', ':mingtaicardreader', ':huadacardreader', ':decard', ':printer_module'
+include ':app',  ':mingtaicardreader',  ':printer_module', ':decard', ':cardreaderswitch'
+//include ':mTReader'
+//include ':mT9Reader'

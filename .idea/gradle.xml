@@ -5,17 +5,15 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:\Program Files\Android\Android Studio\gradle\gradle-2.14.1" />
+        <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/a64cardreader" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/cardreaderswitch" />
             <option value="$PROJECT_DIR$/decard" />
-            <option value="$PROJECT_DIR$/huadacardreader" />
-            <option value="$PROJECT_DIR$/mT9Reader" />
-            <option value="$PROJECT_DIR$/mTReader" />
             <option value="$PROJECT_DIR$/mingtaicardreader" />
+            <option value="$PROJECT_DIR$/printer_module" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
